@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="569" started-at="2018-05-25T06:36:43Z" finished-at="2018-05-25T06:36:43Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="569" started-at="2018-05-25T06:36:43Z" finished-at="2018-05-25T06:36:43Z">
+      <class name="com.mjitech.qa.test.SetUserPasswrod">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.mjitech.qa.test.SetUserPasswrod@1500955a]" name="beforeMethod" is-config="true" duration-ms="9" started-at="2018-05-25T14:36:43Z" finished-at="2018-05-25T14:36:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="setUserPassword(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mjitech.qa.test.SetUserPasswrod@1500955a]" name="setUserPassword" duration-ms="551" started-at="2018-05-25T14:36:43Z" data-provider="setUserPassWord" finished-at="2018-05-25T14:36:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fenjian]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[yier34wu6]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[yier34wu6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUserPassword -->
+      </class> <!-- com.mjitech.qa.test.SetUserPasswrod -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

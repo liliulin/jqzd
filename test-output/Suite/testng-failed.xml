@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="手机端-小程序-账户登录(failed)">
+    <classes>
+      <class name="com.mjitech.qa.test.TestVaildateLoginName">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="VaildateLoginNameByDabao"/>
+        </methods>
+      </class> <!-- com.mjitech.qa.test.TestVaildateLoginName -->
+    </classes>
+  </test> <!-- 手机端-小程序-账户登录(failed) -->
+</suite> <!-- Failed suite [Suite] -->
