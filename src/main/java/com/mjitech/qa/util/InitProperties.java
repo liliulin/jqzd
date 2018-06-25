@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
-import com.mjitech.qa.util.Logger;
+//import com.mjitech.qa.util.Logger;
 
 /**
  * 初始化服务
@@ -27,7 +27,7 @@ public class InitProperties {
 	private void init() {
 		String configPath = System.getProperty("user.dir")+PFILEPATH;
 		File file =new File(configPath);
-		Logger.log("加载配置文件%s", configPath);
+//		Logger.log("加载配置文件%s", configPath);
 		InputStreamReader fn = null;
 		if(file.exists()){
 			try {

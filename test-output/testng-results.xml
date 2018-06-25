@@ -1,38 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="569" started-at="2018-05-25T06:36:43Z" finished-at="2018-05-25T06:36:43Z">
+  <suite name="Default suite" duration-ms="2182" started-at="2018-06-25T11:28:29Z" finished-at="2018-06-25T11:28:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="569" started-at="2018-05-25T06:36:43Z" finished-at="2018-05-25T06:36:43Z">
-      <class name="com.mjitech.qa.test.SetUserPasswrod">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.mjitech.qa.test.SetUserPasswrod@1500955a]" name="beforeMethod" is-config="true" duration-ms="9" started-at="2018-05-25T14:36:43Z" finished-at="2018-05-25T14:36:43Z">
+    <test name="Default test" duration-ms="2182" started-at="2018-06-25T11:28:29Z" finished-at="2018-06-25T11:28:32Z">
+      <class name="com.mjitech.qa.test.AddSkuToCart">
+        <test-method status="PASS" signature="add_sku_to_cart()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="add_sku_to_cart" duration-ms="684" started-at="2018-06-25T19:28:29Z" finished-at="2018-06-25T19:28:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="setUserPassword(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mjitech.qa.test.SetUserPasswrod@1500955a]" name="setUserPassword" duration-ms="551" started-at="2018-05-25T14:36:43Z" data-provider="setUserPassWord" finished-at="2018-05-25T14:36:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[fenjian]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[yier34wu6]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[yier34wu6]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- add_sku_to_cart -->
+        <test-method status="PASS" signature="submitCart()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="submitCart" duration-ms="575" started-at="2018-06-25T19:28:30Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.add_sku_to_cart" finished-at="2018-06-25T19:28:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUserPassword -->
-      </class> <!-- com.mjitech.qa.test.SetUserPasswrod -->
+        </test-method> <!-- submitCart -->
+        <test-method status="PASS" signature="getPayUrl()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="getPayUrl" duration-ms="91" started-at="2018-06-25T19:28:31Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.submitCart" finished-at="2018-06-25T19:28:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPayUrl -->
+        <test-method status="PASS" signature="wxpay_callback_test()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="wxpay_callback_test" duration-ms="806" started-at="2018-06-25T19:28:31Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.getPayUrl" finished-at="2018-06-25T19:28:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- wxpay_callback_test -->
+      </class> <!-- com.mjitech.qa.test.AddSkuToCart -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

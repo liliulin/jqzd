@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="手机端-小程序-账户登录(failed)">
     <classes>
-      <class name="com.mjitech.qa.test.SetUserPasswrod">
+      <class name="com.mjitech.qa.test.VaildateLoginName">
         <methods>
           <include name="beforeMethod"/>
-          <include name="setUserPassword"/>
+          <include name="VaildateLoginNameByDabao"/>
         </methods>
-      </class> <!-- com.mjitech.qa.test.SetUserPasswrod -->
+      </class> <!-- com.mjitech.qa.test.VaildateLoginName -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- 手机端-小程序-账户登录(failed) -->
+</suite> <!-- Failed suite [Suite] -->

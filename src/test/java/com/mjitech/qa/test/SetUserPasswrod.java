@@ -15,7 +15,7 @@ import net.sf.json.JSONObject;
  * @author android
  * @date 2018-05-24
  * */
-public class SetUserPasswrod extends BaseTest {
+public class SetUserPasswrod  {
 	BaseService service = new BaseService();
 	JSONObject json = JSONObject.fromObject("{}");
 	@Test(dataProvider="setUserPassWord",dataProviderClass=SetUserPasswordData.class)

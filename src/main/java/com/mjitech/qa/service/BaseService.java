@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URLEncoder;
 import java.security.MessageDigest;
@@ -18,7 +19,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import net.sf.json.JSONObject;
-
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -105,12 +105,10 @@ public class BaseService {
 		hr = hc.execute(hp);
 		entity = hr.getEntity();
 		BufferedReader postresult = new BufferedReader(new InputStreamReader(entity.getContent(), "UTF-8"));
-
 		// 清空 strb
 		strB.delete(0, strB.length());
 		line = null;
 		while ((line = postresult.readLine()) != null) {
-
 			strB.append(line);
 		}
 		hp.abort();
@@ -381,6 +379,33 @@ public class BaseService {
 		String result = HttpPostUtil.connPostRequest(url, content);
 		return result;
 	}
+	
+	    // post 请求 返回字符串
+		/**
+		 * 不带参数的post请求。
+		 * @author android
+		 * @date 2018年5月30
+		 * */
+		public String httppost(String url)
+				throws ClientProtocolException, IOException {
+			HttpPost hp = new HttpPost(url);
+			//hp.setEntity(new UrlEncodedFormEntity(nvps, Consts.UTF_8));
+			hr = hc.execute(hp);
+			entity = hr.getEntity();
+			BufferedReader postresult = new BufferedReader(new InputStreamReader(
+					entity.getContent(), "UTF-8"));
+
+			// 清空 strb
+			strB.delete(0, strB.length());
+			line = null;
+			while ((line = postresult.readLine()) != null) {
+
+				strB.append(line);
+			}
+			hp.abort();
+
+			return strB.toString();
+		}
 
 	/**
 	 * 对字节数组字符串进行Base64解码并生成图片
@@ -428,5 +453,151 @@ public class BaseService {
 		String bankId = random + "";
 		return bankId;
 	}
+	
+	/**
+	* 不带参数的postHeade请求。
+	* @author android
+	* @date 2018年5月30
+	* */
+	public String httppostHeader(String url,String employeeid,String token,String body)
+			throws ClientProtocolException, IOException {
+		HttpPost hp = new HttpPost(url);
+		hp.setHeader("Content-Type", "application/json");
+		hp.setHeader("employeeid", employeeid);
+		hp.setHeader("token",token);	
+		//String body = "{\"type\":\"ST\"}";
+		hp.setEntity(new StringEntity(body));
+		hr = hc.execute(hp);
+		entity = hr.getEntity();
+		BufferedReader postresult = new BufferedReader(new InputStreamReader(
+			entity.getContent(), "UTF-8"));
+				// 清空 strb
+			strB.delete(0, strB.length());
+			line = null;
+			while ((line = postresult.readLine()) != null) {
+				strB.append(line);
+				}
+				hp.abort();
 
+				return strB.toString();
+	 }
+	
+		// post 请求 返回json字符串
+		public JSONObject httppostHeaderReturnJson(String url,String employeeid,String token,String body)
+				throws ClientProtocolException, IOException {
+			HttpPost hp = new HttpPost(url);
+			hp.setHeader("Content-Type", "application/json");
+			hp.setHeader("employeeid", employeeid);
+			hp.setHeader("token",token);	
+			//String body = "{\"type\":\"ST\"}";			
+			hp.setEntity(new StringEntity(body));			
+			hr = hc.execute(hp);
+			entity = hr.getEntity();
+			BufferedReader postresult = new BufferedReader(new InputStreamReader(entity.getContent(), "UTF-8"));
+
+			// 清空 strb
+			strB.delete(0, strB.length());
+			line = null;
+			while ((line = postresult.readLine()) != null) {
+				strB.append(line);
+			}
+			hp.abort();
+			json.clear();
+			try {
+				json = JSONObject.fromObject(strB.toString());
+			} catch (Exception e) {
+				json = new JSONObject();
+				System.out.println("返回不是json数据：" + strB.toString());
+			}
+
+			return json;
+		}
+		
+		/**
+		 * post 添加购物车请求。
+		 * @return josn
+		 * */	
+		public JSONObject httppostCartReturnJson(String url, List<NameValuePair> nvps)
+				throws ClientProtocolException, IOException {
+			HttpPost hp = new HttpPost(url);
+		//	hp.setHeader("Content-Type", "application/json");
+			hp.setHeader("mjitech-machine-cert", "TWppdGVjaDIwMTY=");
+			hp.setEntity(new UrlEncodedFormEntity(nvps, Consts.UTF_8));
+			hr = hc.execute(hp);
+			entity = hr.getEntity();
+			BufferedReader postresult = new BufferedReader(new InputStreamReader(entity.getContent(), "UTF-8"));
+
+			// 清空 strb
+			strB.delete(0, strB.length());
+			line = null;
+			while ((line = postresult.readLine()) != null) {
+				strB.append(line);
+			}
+			hp.abort();
+			json.clear();
+			try {
+				json = JSONObject.fromObject(strB.toString());
+			} catch (Exception e) {
+				json = new JSONObject();
+				System.out.println("返回不是json数据：" + strB.toString());
+			}
+
+			return json;
+		}
+		
+		/**
+		 * post 添加购物车请求。
+		 * @return josn
+		 * */	
+		public JSONObject httppostPayCallBackJson(String url, List<NameValuePair> nvps)
+				throws ClientProtocolException, IOException {
+			HttpPost hp = new HttpPost(url);
+		//	hp.setHeader("Content-Type", "application/json");
+			hp.setHeader("Content-Type", "X-WWW-FORM-URLENCODED");
+			hp.setHeader("token","f3Yaw!fay*f234^f1opUh5");
+			hp.setEntity(new UrlEncodedFormEntity(nvps, Consts.UTF_8));
+			hr = hc.execute(hp);
+			entity = hr.getEntity();
+			BufferedReader postresult = new BufferedReader(new InputStreamReader(entity.getContent(), "UTF-8"));
+
+			// 清空 strb
+			strB.delete(0, strB.length());
+			line = null;
+			while ((line = postresult.readLine()) != null) {
+				strB.append(line);
+			}
+			hp.abort();
+			json.clear();
+			try {
+				json = JSONObject.fromObject(strB.toString());
+			} catch (Exception e) {
+				json = new JSONObject();
+				System.out.println("返回不是json数据：" + strB.toString());
+			}
+
+			return json;
+		}
+		
+		/**
+		 * 
+		 * */
+		public String httppostPayCallBack(String url, List<NameValuePair> nvps) throws ClientProtocolException, IOException {
+			HttpPost hp = new HttpPost(url);
+			hp.setEntity(new UrlEncodedFormEntity(nvps, Consts.UTF_8));
+			hp.setHeader("Content-Type", "X-WWW-FORM-URLENCODED");
+			hp.setHeader("token","f3Yaw!fay*f234^f1opUh5");
+			hr = hc.execute(hp);
+			entity = hr.getEntity();
+			BufferedReader postresult = new BufferedReader(new InputStreamReader(entity.getContent(), "UTF-8"));
+			// 清空 strb
+			strB.delete(0, strB.length());
+			line = null;
+			while ((line = postresult.readLine()) != null) {
+				strB.append(line);
+			}
+			hp.abort();
+
+			return strB.toString();
+		}
+	
 }

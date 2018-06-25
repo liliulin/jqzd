@@ -17,7 +17,7 @@ import net.sf.json.JSONObject;
  * @author android
  * @date 2018-05-23
  */
-public class VaildateLoginName extends BaseTest {
+public class VaildateLoginName {
 	JSONObject json = JSONObject.fromObject("{}");
 	HttpMethod httpMethod = new HttpMethod();
 	BaseService service = new BaseService();

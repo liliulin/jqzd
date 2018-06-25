@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="手机端-小程序-账户登录"
-           tests="4"
+           tests="5"
            failures="0"
            errors="0"
            skipped="0"
-           time="2.352">
+           time="2.067">
   <properties />
   
   
-            <testcase name="login" time="0.774" classname="com.mjitech.qa.test.Login" />
-                <testcase name="login" time="0.858" classname="com.mjitech.qa.test.Login" />
-                <testcase name="login" time="0.616" classname="com.mjitech.qa.test.Login" />
-                <testcase name="login" time="0.104" classname="com.mjitech.qa.test.Login" />
+            <testcase name="login" time="0.035" classname="com.mjitech.qa.test.Login" />
+                <testcase name="login" time="0.031" classname="com.mjitech.qa.test.Login" />
+                <testcase name="login" time="0.032" classname="com.mjitech.qa.test.Login" />
+                <testcase name="login" time="1.932" classname="com.mjitech.qa.test.Login" />
+                <testcase name="login" time="0.037" classname="com.mjitech.qa.test.Login" />
       
 </testsuite>

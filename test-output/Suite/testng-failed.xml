@@ -7,12 +7,12 @@
   </listeners>
   <test name="手机端-小程序-账户登录(failed)">
     <classes>
-      <class name="com.mjitech.qa.test.TestVaildateLoginName">
+      <class name="com.mjitech.qa.test.VaildateLoginName">
         <methods>
           <include name="beforeMethod"/>
           <include name="VaildateLoginNameByDabao"/>
         </methods>
-      </class> <!-- com.mjitech.qa.test.TestVaildateLoginName -->
+      </class> <!-- com.mjitech.qa.test.VaildateLoginName -->
     </classes>
   </test> <!-- 手机端-小程序-账户登录(failed) -->
 </suite> <!-- Failed suite [Suite] -->

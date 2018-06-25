@@ -9,13 +9,13 @@ import com.mjitech.qa.data.LoginDate;
 import com.mjitech.qa.service.BaseService;
 
 import junit.framework.Assert;
-import net.sf.json.JSONObject;;
+import net.sf.json.JSONObject;
 /**
  * 登录接口
  * @author android
  * @date 2018-05-23
  * */
-public class Login extends BaseTest {
+public class Login {
 	BaseService service  =new BaseService();
 	JSONObject json = JSONObject.fromObject("{}");
 	@Test(dataProvider = "loginFenJian", dataProviderClass = LoginDate.class)

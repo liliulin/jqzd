@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.mjitech.qa.test.SetUserPasswrod">
+      <class name="com.mjitech.qa.test.TestTypeList">
         <methods>
           <include name="beforeMethod"/>
-          <include name="setUserPassword"/>
+          <include name="login"/>
+          <include name="test002"/>
         </methods>
-      </class> <!-- com.mjitech.qa.test.SetUserPasswrod -->
+      </class> <!-- com.mjitech.qa.test.TestTypeList -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

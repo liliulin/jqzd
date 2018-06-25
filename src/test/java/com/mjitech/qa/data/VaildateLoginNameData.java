@@ -7,7 +7,7 @@ import org.testng.annotations.DataProvider;
  * @author android
  * @date 2018-05-23
  * */
-public class VaildateLoginNameData extends MjitechData {
+public class VaildateLoginNameData {
 	@DataProvider(name="vaildateLoginName")
 	public Object[][] vaildateLoginName(){
 		return new Object[][] {
