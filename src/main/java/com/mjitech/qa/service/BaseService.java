@@ -578,26 +578,40 @@ public class BaseService {
 			return json;
 		}
 		
+		
 		/**
+		 * 支付回调服务接口
+		 * @param String url  接口地址
+		 * @param String body body类型参数
+		 * @author gangwang
 		 * 
 		 * */
-		public String httppostPayCallBack(String url, List<NameValuePair> nvps) throws ClientProtocolException, IOException {
+		public JSONObject httppostPayCall(String url,String body)
+			throws ClientProtocolException, IOException {
 			HttpPost hp = new HttpPost(url);
-			hp.setEntity(new UrlEncodedFormEntity(nvps, Consts.UTF_8));
-			hp.setHeader("Content-Type", "X-WWW-FORM-URLENCODED");
-			hp.setHeader("token","f3Yaw!fay*f234^f1opUh5");
+			hp.setHeader("Content-Type", "application/json");
+			hp.setHeader("token","f3Yawfayf234f1opUh5");	
+					//String body = "{\"type\":\"ST\"}";			
+			hp.setEntity(new StringEntity(body));			
 			hr = hc.execute(hp);
 			entity = hr.getEntity();
-			BufferedReader postresult = new BufferedReader(new InputStreamReader(entity.getContent(), "UTF-8"));
-			// 清空 strb
+		    BufferedReader postresult = new BufferedReader(new InputStreamReader(entity.getContent(), "UTF-8"));
+		    // 清空 strb
 			strB.delete(0, strB.length());
 			line = null;
 			while ((line = postresult.readLine()) != null) {
 				strB.append(line);
-			}
-			hp.abort();
+					}
+					hp.abort();
+					json.clear();
+					try {
+						json = JSONObject.fromObject(strB.toString());
+					} catch (Exception e) {
+						json = new JSONObject();
+						System.out.println("返回不是json数据：" + strB.toString());
+					}
 
-			return strB.toString();
-		}
+					return json;
+			}
 	
 }

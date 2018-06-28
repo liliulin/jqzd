@@ -100,13 +100,10 @@ public class AddSkuToCart {
 	 * */
 	@Test(dependsOnMethods = "getPayUrl")
 	public void wxpay_callback_test() {
-		String url="http://test.mjitech.com/web/wxpay_callback_test.action" ;
-		json.put("result_code", "SUCCESSTEST");
-		json.put("out_trade_no",orderNumber) ;
-		json.put("openid", "o41Mgvxx0Hzo1uihwTqHmMBRx1K8");
-		
+		String url="http://test.mjitech.com/web/weixinpay_callback_test.action" ;
+		String body = "{\"return_code\":\"SUCCESSTEST\",\"openid\": \"oj4sH0qtPm0x0-ggPk0AQZGQR9xs\",\"out_trade_no\":\""+orderNumber+"\"}";
 		try {
-			String  result  = service.httppostPayCallBack(url, service.postParameter(json));
+			JSONObject  result  = service.httppostPayCall(url, body);			
 			System.out.println("支付结果："+result);
 		} catch (ClientProtocolException e) {
 			// TODO Auto-generated catch block
@@ -114,10 +111,10 @@ public class AddSkuToCart {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
-		
+		}	
 	}
+	
+	
 	
 	
 	

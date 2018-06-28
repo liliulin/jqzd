@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.mjitech.qa.test.TestTypeList">
+      <class name="com.mjitech.qa.test.AddSkuToCart">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="login"/>
-          <include name="test002"/>
+          <include name="submitCart"/>
+          <include name="wxpay_callback_test"/>
+          <include name="getPayUrl"/>
+          <include name="add_sku_to_cart"/>
         </methods>
-      </class> <!-- com.mjitech.qa.test.TestTypeList -->
+      </class> <!-- com.mjitech.qa.test.AddSkuToCart -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

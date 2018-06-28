@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-  </listeners>
-  <test name="手机端-小程序-账户登录(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.mjitech.qa.test.VaildateLoginName">
+      <class name="com.mjitech.qa.test.AddSkuToCart">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="VaildateLoginNameByDabao"/>
+          <include name="submitCart"/>
+          <include name="wxpay_callback_test"/>
+          <include name="getPayUrl"/>
+          <include name="add_sku_to_cart"/>
         </methods>
-      </class> <!-- com.mjitech.qa.test.VaildateLoginName -->
+      </class> <!-- com.mjitech.qa.test.AddSkuToCart -->
     </classes>
-  </test> <!-- 手机端-小程序-账户登录(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

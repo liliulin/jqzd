@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2182" started-at="2018-06-25T11:28:29Z" finished-at="2018-06-25T11:28:32Z">
+  <suite name="Default suite" duration-ms="742" started-at="2018-06-27T09:56:32Z" finished-at="2018-06-27T09:56:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2182" started-at="2018-06-25T11:28:29Z" finished-at="2018-06-25T11:28:32Z">
+    <test name="Default test" duration-ms="742" started-at="2018-06-27T09:56:32Z" finished-at="2018-06-27T09:56:33Z">
       <class name="com.mjitech.qa.test.AddSkuToCart">
-        <test-method status="PASS" signature="add_sku_to_cart()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="add_sku_to_cart" duration-ms="684" started-at="2018-06-25T19:28:29Z" finished-at="2018-06-25T19:28:30Z">
+        <test-method status="PASS" signature="add_sku_to_cart()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="add_sku_to_cart" duration-ms="482" started-at="2018-06-27T17:56:32Z" finished-at="2018-06-27T17:56:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- add_sku_to_cart -->
-        <test-method status="PASS" signature="submitCart()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="submitCart" duration-ms="575" started-at="2018-06-25T19:28:30Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.add_sku_to_cart" finished-at="2018-06-25T19:28:31Z">
+        <test-method status="PASS" signature="submitCart()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="submitCart" duration-ms="125" started-at="2018-06-27T17:56:33Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.add_sku_to_cart" finished-at="2018-06-27T17:56:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitCart -->
-        <test-method status="PASS" signature="getPayUrl()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="getPayUrl" duration-ms="91" started-at="2018-06-25T19:28:31Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.submitCart" finished-at="2018-06-25T19:28:31Z">
+        <test-method status="PASS" signature="getPayUrl()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="getPayUrl" duration-ms="53" started-at="2018-06-27T17:56:33Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.submitCart" finished-at="2018-06-27T17:56:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getPayUrl -->
-        <test-method status="PASS" signature="wxpay_callback_test()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="wxpay_callback_test" duration-ms="806" started-at="2018-06-25T19:28:31Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.getPayUrl" finished-at="2018-06-25T19:28:32Z">
+        <test-method status="PASS" signature="wxpay_callback_test()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="wxpay_callback_test" duration-ms="55" started-at="2018-06-27T17:56:33Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.getPayUrl" finished-at="2018-06-27T17:56:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- wxpay_callback_test -->
