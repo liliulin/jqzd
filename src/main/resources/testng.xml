@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
-
+<!-- 
   <test name="手机端-小程序-账户登录">
     <classes>
       <class name="com.mjitech.qa.test.VaildateLoginName"/>
       <class name="com.mjitech.qa.test.Login"/>
     </classes>
-  </test> <!-- Test -->
+  </test>
+   -->
+   <!-- Test -->
+  <test name="平板需求相关接口">
+  	<classes>
+      <class name="com.mjitech.qa.test.GetMachineData"/>
+      <class name="com.mjitech.qa.test.ListFault"/>
+      <class name="com.mjitech.qa.test.UpdateDoorClose"/>
+    </classes>
+  </test>
   <listeners>
   	<listener class-name="org.uncommons.reportng.HTMLReporter" />
   	<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />

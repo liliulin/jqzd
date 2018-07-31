@@ -520,7 +520,7 @@ public class BaseService {
 		public JSONObject httppostCartReturnJson(String url, List<NameValuePair> nvps)
 				throws ClientProtocolException, IOException {
 			HttpPost hp = new HttpPost(url);
-		//	hp.setHeader("Content-Type", "application/json");
+			hp.setHeader("Content-Type", "application/json");
 			hp.setHeader("mjitech-machine-cert", "TWppdGVjaDIwMTY=");
 			hp.setEntity(new UrlEncodedFormEntity(nvps, Consts.UTF_8));
 			hr = hc.execute(hp);
@@ -583,7 +583,8 @@ public class BaseService {
 		 * 支付回调服务接口
 		 * @param String url  接口地址
 		 * @param String body body类型参数
-		 * @author gangwang
+		 * @author gangwang@mjitech.com
+		 * @date 2018-06-20
 		 * 
 		 * */
 		public JSONObject httppostPayCall(String url,String body)
@@ -612,6 +613,44 @@ public class BaseService {
 					}
 
 					return json;
-			}
-	
+			}	
+		
+		/**
+		 * 平板需求服务方法
+		 * @param String url  接口地址
+		 * @param String body body类型参数
+		 * @author gangwang@mjitech.com
+		 * @date 2018-07-26
+		 * 
+		 * */
+		public JSONObject httpPostFlat(String url,String body)
+			throws ClientProtocolException, IOException {
+			HttpPost hp = new HttpPost(url);
+			hp.setHeader("Content-Type", "application/json");
+			hp.setHeader("mjitech-machine-cert", "TWppdGVjaDIwMTY=");
+					//String body = "{\"type\":\"ST\"}";			
+			hp.setEntity(new StringEntity(body));			
+			hr = hc.execute(hp);
+			entity = hr.getEntity();
+		    BufferedReader postresult = new BufferedReader(new InputStreamReader(entity.getContent(), "UTF-8"));
+		    // 清空 strb
+			strB.delete(0, strB.length());
+			line = null;
+			while ((line = postresult.readLine()) != null) {
+				strB.append(line);
+					}
+					hp.abort();
+					json.clear();
+					try {
+						json = JSONObject.fromObject(strB.toString());
+					} catch (Exception e) {
+						json = new JSONObject();
+						System.out.println("返回不是json数据：" + strB.toString());
+					}
+
+					return json;
+			}	
+		
+		
+		
 }

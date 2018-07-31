@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="742" started-at="2018-06-27T09:56:32Z" finished-at="2018-06-27T09:56:33Z">
+  <suite name="Suite" duration-ms="709" started-at="2018-07-31T03:33:03Z" finished-at="2018-07-31T03:33:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="742" started-at="2018-06-27T09:56:32Z" finished-at="2018-06-27T09:56:33Z">
-      <class name="com.mjitech.qa.test.AddSkuToCart">
-        <test-method status="PASS" signature="add_sku_to_cart()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="add_sku_to_cart" duration-ms="482" started-at="2018-06-27T17:56:32Z" finished-at="2018-06-27T17:56:33Z">
+    <test name="平板需求相关接口" duration-ms="709" started-at="2018-07-31T03:33:03Z" finished-at="2018-07-31T03:33:04Z">
+      <class name="com.mjitech.qa.test.ListFault">
+        <test-method status="PASS" signature="list_fault()[pri:0, instance:com.mjitech.qa.test.ListFault@5427c60c]" name="list_fault" duration-ms="76" started-at="2018-07-31T11:33:04Z" finished-at="2018-07-31T11:33:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- add_sku_to_cart -->
-        <test-method status="PASS" signature="submitCart()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="submitCart" duration-ms="125" started-at="2018-06-27T17:56:33Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.add_sku_to_cart" finished-at="2018-06-27T17:56:33Z">
+        </test-method> <!-- list_fault -->
+      </class> <!-- com.mjitech.qa.test.ListFault -->
+      <class name="com.mjitech.qa.test.UpdateDoorClose">
+        <test-method status="PASS" signature="update_close_door()[pri:0, instance:com.mjitech.qa.test.UpdateDoorClose@15bfd87]" name="update_close_door" duration-ms="57" started-at="2018-07-31T11:33:04Z" finished-at="2018-07-31T11:33:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- submitCart -->
-        <test-method status="PASS" signature="getPayUrl()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="getPayUrl" duration-ms="53" started-at="2018-06-27T17:56:33Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.submitCart" finished-at="2018-06-27T17:56:33Z">
+        </test-method> <!-- update_close_door -->
+      </class> <!-- com.mjitech.qa.test.UpdateDoorClose -->
+      <class name="com.mjitech.qa.test.GetMachineData">
+        <test-method status="PASS" signature="getMachineData()[pri:0, instance:com.mjitech.qa.test.GetMachineData@768b970c]" name="getMachineData" duration-ms="559" started-at="2018-07-31T11:33:03Z" finished-at="2018-07-31T11:33:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getPayUrl -->
-        <test-method status="PASS" signature="wxpay_callback_test()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@4abdb505]" name="wxpay_callback_test" duration-ms="55" started-at="2018-06-27T17:56:33Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.getPayUrl" finished-at="2018-06-27T17:56:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- wxpay_callback_test -->
-      </class> <!-- com.mjitech.qa.test.AddSkuToCart -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- getMachineData -->
+      </class> <!-- com.mjitech.qa.test.GetMachineData -->
+    </test> <!-- 平板需求相关接口 -->
+  </suite> <!-- Suite -->
 </testng-results>
