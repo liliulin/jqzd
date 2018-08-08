@@ -1,29 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="709" started-at="2018-07-31T03:33:03Z" finished-at="2018-07-31T03:33:04Z">
+  <suite name="Default suite" duration-ms="961" started-at="2018-08-08T10:11:44Z" finished-at="2018-08-08T10:11:45Z">
     <groups>
     </groups>
-    <test name="平板需求相关接口" duration-ms="709" started-at="2018-07-31T03:33:03Z" finished-at="2018-07-31T03:33:04Z">
-      <class name="com.mjitech.qa.test.ListFault">
-        <test-method status="PASS" signature="list_fault()[pri:0, instance:com.mjitech.qa.test.ListFault@5427c60c]" name="list_fault" duration-ms="76" started-at="2018-07-31T11:33:04Z" finished-at="2018-07-31T11:33:04Z">
+    <test name="Default test" duration-ms="961" started-at="2018-08-08T10:11:44Z" finished-at="2018-08-08T10:11:45Z">
+      <class name="com.mjitech.qa.test.UploadImageList">
+        <test-method status="PASS" signature="upload_image_list()[pri:0, instance:com.mjitech.qa.test.UploadImageList@45820e51]" name="upload_image_list" duration-ms="938" started-at="2018-08-08T18:11:44Z" finished-at="2018-08-08T18:11:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- list_fault -->
-      </class> <!-- com.mjitech.qa.test.ListFault -->
-      <class name="com.mjitech.qa.test.UpdateDoorClose">
-        <test-method status="PASS" signature="update_close_door()[pri:0, instance:com.mjitech.qa.test.UpdateDoorClose@15bfd87]" name="update_close_door" duration-ms="57" started-at="2018-07-31T11:33:04Z" finished-at="2018-07-31T11:33:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- update_close_door -->
-      </class> <!-- com.mjitech.qa.test.UpdateDoorClose -->
-      <class name="com.mjitech.qa.test.GetMachineData">
-        <test-method status="PASS" signature="getMachineData()[pri:0, instance:com.mjitech.qa.test.GetMachineData@768b970c]" name="getMachineData" duration-ms="559" started-at="2018-07-31T11:33:03Z" finished-at="2018-07-31T11:33:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getMachineData -->
-      </class> <!-- com.mjitech.qa.test.GetMachineData -->
-    </test> <!-- 平板需求相关接口 -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- upload_image_list -->
+      </class> <!-- com.mjitech.qa.test.UploadImageList -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

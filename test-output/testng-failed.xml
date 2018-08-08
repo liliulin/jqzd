@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.mjitech.qa.test.ListFault">
+      <class name="com.mjitech.qa.test.GetMachineData">
         <methods>
-          <include name="list_fault"/>
+          <include name="getMachineData"/>
         </methods>
-      </class> <!-- com.mjitech.qa.test.ListFault -->
+      </class> <!-- com.mjitech.qa.test.GetMachineData -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

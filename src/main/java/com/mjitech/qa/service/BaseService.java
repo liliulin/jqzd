@@ -1,6 +1,7 @@
 package com.mjitech.qa.service;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -22,6 +23,7 @@ import net.sf.json.JSONObject;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -29,7 +31,12 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
+import org.apache.http.entity.mime.HttpMultipartMode;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import com.mjitech.qa.util.Base64;
@@ -650,6 +657,74 @@ public class BaseService {
 
 					return json;
 			}	
+		
+		/**
+		 * 图片上传接口
+		 * @param  url 上传URL
+		 * @param  fileType  文件类型
+		 * */
+//		public String uploadImageList(String url,String file)
+//				throws ClientProtocolException, IOException {
+//			HttpClient httpclient = HttpClientBuilder.create().build();
+//			HttpPost httppost = new HttpPost(url);
+//			HttpEntity req = MultipartEntityBuilder.create().setMode(HttpMultipartMode.BROWSER_COMPATIBLE)
+//					.addPart("filename", new FileBody(new File(System.getProperty("user.dir") + "\\imageLib\\card.jpg"))).build();
+//				//	.addTextBody("files", file).build();
+//					
+//
+//
+//			System.out.println("executing request: " + httppost.getRequestLine());
+//
+//			HttpResponse response = httpclient.execute(httppost);
+//			HttpEntity re = response.getEntity();
+//			System.out.println(response.getStatusLine());
+//			BufferedReader postresult = new BufferedReader(new InputStreamReader(re.getContent()));
+//			StringBuilder strB = new StringBuilder();
+//			String line = null;
+//			if ((line = postresult.readLine()) != null) {
+//				strB.append(line);
+//			}
+//			EntityUtils.consume(re);
+//
+//			return strB.toString();
+//		}
+			/**
+			 * 图片上传接口
+			 * @param  url 上传URL
+			 * @author gangwang
+			 * @date 2018-08-08
+			 * */
+		   public String uploadImageList(String url){ 
+			   String status = "" ;
+		       HttpClient client=new DefaultHttpClient();  
+		       HttpPost httpPost=new HttpPost(url);//通过post传递  
+		       /**绑定数据  这里需要注意  如果是中文  会出现中文乱码问题 但只要按设置好*/  
+		       MultipartEntity muit=new MultipartEntity();  
+		       // 上传 文本， 转换编码为utf-8 其中"text" 为字段名，  
+		       //Charset.forName(CHARSET)为参数值,可设置为UTF-8，其实就是正常的值转换成utf-8的编码格式  
+		       // 后边new StringBody(text,Charset.forName(CHARSET))  
+		       File parent = new File(System.getProperty("user.dir") + "\\imageLib\\");
+		       File fileupload=new File(parent,"card.jpg");  
+		       FileBody fileBody=new FileBody(fileupload);  
+		       muit.addPart("files",fileBody);  
+		       httpPost.setEntity(muit);  
+		       /**发送请求*/  
+		       try {  
+		           HttpResponse response=client.execute(httpPost);  
+		           //判断是否上传成功  返回200  
+		           if (response.getStatusLine().getStatusCode()== HttpStatus.SC_OK){  
+		             //  System.out.println(EntityUtils.toString(response.getEntity()));  
+		        	   status = EntityUtils.toString(response.getEntity());
+		           }  
+		       } catch (ClientProtocolException e){  
+		           e.printStackTrace();  
+		       } catch (IOException e) {  
+		           e.printStackTrace();  
+		       }  
+		       
+		       return status;
+		  
+		   }  
 		
 		
 		
