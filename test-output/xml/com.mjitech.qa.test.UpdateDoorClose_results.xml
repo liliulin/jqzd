@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="平板需求相关接口"
+<testsuite name="Flat Interface"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="0.057">
+           time="0.026">
   <properties />
   
   
-            <testcase name="update_close_door" time="0.057" classname="com.mjitech.qa.test.UpdateDoorClose" />
+            <testcase name="update_close_door" time="0.026" classname="com.mjitech.qa.test.UpdateDoorClose" />
       
 </testsuite>

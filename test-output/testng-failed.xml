@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="mobile-micoo prgoram-login(failed)">
     <classes>
-      <class name="com.mjitech.qa.test.GetMachineData">
+      <class name="com.mjitech.qa.test.VaildateLoginName">
         <methods>
-          <include name="getMachineData"/>
+          <include name="VaildateLoginNameByDabao"/>
         </methods>
-      </class> <!-- com.mjitech.qa.test.GetMachineData -->
+      </class> <!-- com.mjitech.qa.test.VaildateLoginName -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- mobile-micoo prgoram-login(failed) -->
+</suite> <!-- Failed suite [Suite] -->

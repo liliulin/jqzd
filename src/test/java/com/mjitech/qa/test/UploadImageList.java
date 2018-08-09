@@ -17,6 +17,7 @@ public class UploadImageList {
 		String url = "http://preprod.mjitech.com/web/upload_image_list.action" ;
 		//{"meta":{"code":"200","message":"成功","success":true},"data":[3877]}
 		String result = service.uploadImageList(url);  
+		System.out.println("平板-上传图片信息接口："+result);
 		JSONObject stringtoJson = JSONObject.fromObject(result);	
 		String code = stringtoJson.getJSONObject("meta").getString("code");
 		Assert.assertEquals("200", code);

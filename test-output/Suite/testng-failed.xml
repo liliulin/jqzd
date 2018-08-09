@@ -5,14 +5,13 @@
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test name="手机端-小程序-账户登录(failed)">
+  <test name="mobile-micoo prgoram-login(failed)">
     <classes>
       <class name="com.mjitech.qa.test.VaildateLoginName">
         <methods>
-          <include name="beforeMethod"/>
           <include name="VaildateLoginNameByDabao"/>
         </methods>
       </class> <!-- com.mjitech.qa.test.VaildateLoginName -->
     </classes>
-  </test> <!-- 手机端-小程序-账户登录(failed) -->
+  </test> <!-- mobile-micoo prgoram-login(failed) -->
 </suite> <!-- Failed suite [Suite] -->

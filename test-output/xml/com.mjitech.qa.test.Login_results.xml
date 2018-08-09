@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="手机端-小程序-账户登录"
+<testsuite name="mobile-micoo prgoram-login"
            tests="5"
            failures="0"
            errors="0"
            skipped="0"
-           time="2.067">
+           time="0.562">
   <properties />
   
   
-            <testcase name="login" time="0.035" classname="com.mjitech.qa.test.Login" />
-                <testcase name="login" time="0.031" classname="com.mjitech.qa.test.Login" />
-                <testcase name="login" time="0.032" classname="com.mjitech.qa.test.Login" />
-                <testcase name="login" time="1.932" classname="com.mjitech.qa.test.Login" />
-                <testcase name="login" time="0.037" classname="com.mjitech.qa.test.Login" />
+            <testcase name="login" time="0.032" classname="com.mjitech.qa.test.Login" />
+                <testcase name="login" time="0.028" classname="com.mjitech.qa.test.Login" />
+                <testcase name="login" time="0.440" classname="com.mjitech.qa.test.Login" />
+                <testcase name="login" time="0.033" classname="com.mjitech.qa.test.Login" />
+                <testcase name="login" time="0.029" classname="com.mjitech.qa.test.Login" />
       
 </testsuite>
