@@ -14,4 +14,14 @@
       </class> <!-- com.mjitech.qa.test.VaildateLoginName -->
     </classes>
   </test> <!-- mobile-micoo prgoram-login(failed) -->
+  <test name="WeiXin Interface(failed)">
+    <classes>
+      <class name="com.mjitech.qa.test.GetPagedMainpageData">
+        <methods>
+          <include name="test_login_with_openid"/>
+          <include name="get_paged_mainpage_data"/>
+        </methods>
+      </class> <!-- com.mjitech.qa.test.GetPagedMainpageData -->
+    </classes>
+  </test> <!-- WeiXin Interface(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.026">
+           time="0.031">
   <properties />
   
   
-            <testcase name="update_close_door" time="0.026" classname="com.mjitech.qa.test.UpdateDoorClose" />
+            <testcase name="update_close_door" time="0.031" classname="com.mjitech.qa.test.UpdateDoorClose" />
       
 </testsuite>

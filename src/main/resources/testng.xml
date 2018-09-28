@@ -16,9 +16,12 @@
       <class name="com.mjitech.qa.test.UploadImageList" />
     </classes>
   </test>
+  
   <test name="WeiXin Interface">
-  	<class name="com.mjitech.qa.test.GetPagedMainpageData"></class>
-  </test>
+  	<classes>
+  		<class name="com.mjitech.qa.test.GetPagedMainpageData"></class>
+  	</classes>
+  </test> 
   <listeners>
   	<listener class-name="org.uncommons.reportng.HTMLReporter" />
   	<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
