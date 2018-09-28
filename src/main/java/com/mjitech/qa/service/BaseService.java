@@ -528,6 +528,7 @@ public class BaseService {
 				throws ClientProtocolException, IOException {
 			HttpPost hp = new HttpPost(url);
 			hp.setHeader("Content-Type", "application/json");
+			hp.setHeader("Content-Type", "application/x-www-form-urlencoded");
 			hp.setHeader("mjitech-machine-cert", "TWppdGVjaDIwMTY=");
 			hp.setEntity(new UrlEncodedFormEntity(nvps, Consts.UTF_8));
 			hr = hc.execute(hp);
@@ -553,7 +554,42 @@ public class BaseService {
 		}
 		
 		/**
-		 * post 添加购物车请求。
+		 * post 27寸屏幕
+		 * @param url 访问地址
+		 * @param nvps 参数集合
+		 * @author gangwang
+		 * @return josn
+		 * */	
+		public JSONObject httppostCartReturnJson27(String url, List<NameValuePair> nvps)
+				throws ClientProtocolException, IOException {
+			HttpPost hp = new HttpPost(url);
+			hp.setHeader("Content-Type", "application/x-www-form-urlencoded");
+			hp.setHeader("mjitech-machine-cert", "TWppdGVjaDIwMTY=");
+			hp.setEntity(new UrlEncodedFormEntity(nvps, Consts.UTF_8));
+			hr = hc.execute(hp);
+			entity = hr.getEntity();
+			BufferedReader postresult = new BufferedReader(new InputStreamReader(entity.getContent(), "UTF-8"));
+
+			// 清空 strb
+			strB.delete(0, strB.length());
+			line = null;
+			while ((line = postresult.readLine()) != null) {
+				strB.append(line);
+			}
+			hp.abort();
+			json.clear();
+			try {
+				json = JSONObject.fromObject(strB.toString());
+			} catch (Exception e) {
+				json = new JSONObject();
+				System.out.println("返回不是json数据：" + strB.toString());
+			}
+
+			return json;
+		}
+		
+		/**
+		 * post 添加购物车，支付回调。
 		 * @return josn
 		 * */	
 		public JSONObject httppostPayCallBackJson(String url, List<NameValuePair> nvps)

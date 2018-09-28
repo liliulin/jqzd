@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.mjitech.qa.test.GetMachineData">
+      <class name="com.mjitech.qa.test.GetPagedMainpageData">
         <methods>
-          <include name="getMachineData"/>
+          <include name="test_login_with_openid"/>
+          <include name="get_paged_mainpage_data"/>
         </methods>
-      </class> <!-- com.mjitech.qa.test.GetMachineData -->
+      </class> <!-- com.mjitech.qa.test.GetPagedMainpageData -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
