@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-  </listeners>
-  <test name="mobile-micoo prgoram-login(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.mjitech.qa.test.VaildateLoginName">
+      <class name="com.mjitech.qa.test.AddSkuToCart">
         <methods>
-          <include name="VaildateLoginNameByDabao"/>
+          <include name="submitCart"/>
+          <include name="get_order_detail"/>
+          <include name="get_order_detail_by_takingnumber"/>
+          <include name="wxpay_callback_test"/>
+          <include name="beforerMethod"/>
+          <include name="getPayUrl"/>
+          <include name="add_sku_to_cart"/>
+          <include name="update_order_status"/>
+          <include name="end"/>
         </methods>
-      </class> <!-- com.mjitech.qa.test.VaildateLoginName -->
+      </class> <!-- com.mjitech.qa.test.AddSkuToCart -->
     </classes>
-  </test> <!-- mobile-micoo prgoram-login(failed) -->
-  <test name="WeiXin Interface(failed)">
-    <classes>
-      <class name="com.mjitech.qa.test.GetPagedMainpageData">
-        <methods>
-          <include name="test_login_with_openid"/>
-          <include name="get_paged_mainpage_data"/>
-        </methods>
-      </class> <!-- com.mjitech.qa.test.GetPagedMainpageData -->
-    </classes>
-  </test> <!-- WeiXin Interface(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

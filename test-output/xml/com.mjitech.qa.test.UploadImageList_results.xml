@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.040">
+           time="0.031">
   <properties />
   
   
-            <testcase name="fault" time="0.040" classname="com.mjitech.qa.test.UploadImageList" />
+            <testcase name="fault" time="0.031" classname="com.mjitech.qa.test.UploadImageList" />
       
 </testsuite>

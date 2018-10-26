@@ -22,6 +22,12 @@
   		<class name="com.mjitech.qa.test.GetPagedMainpageData"></class>
   	</classes>
   </test> 
+  
+  <test name="27 Interface">
+  	<classes>
+  		<class name="com.mjitech.qa.test.AddSkuToCart"></class>
+  	</classes>
+  </test>
   <listeners>
   	<listener class-name="org.uncommons.reportng.HTMLReporter" />
   	<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />

@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.069">
+           time="0.125">
   <properties />
   
   
-            <testcase name="getMachineData" time="0.069" classname="com.mjitech.qa.test.GetMachineData" />
+            <testcase name="getMachineData" time="0.125" classname="com.mjitech.qa.test.GetMachineData" />
       
 </testsuite>
