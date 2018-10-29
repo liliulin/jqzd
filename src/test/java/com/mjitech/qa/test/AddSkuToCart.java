@@ -36,7 +36,7 @@ public class AddSkuToCart {
 		String shwoQuantity = "select quantity from mt_inventory where warehouse_id=17 and sku_id=679 ORDER BY id desc" ;
 		String show_mt_new_sku_pass_real_quantity = "select real_quantity from mt_inventory where warehouse_id=17 and sku_id=679 ORDER BY id desc" ;
 		String show_real_quantity = "select real_quantity from mt_new_sku_pass where warehouse_id=17 and sku_id=679 ORDER BY id desc" ;
-		DBConnection db = new DBConnection("test");
+		DBConnection db = new DBConnection("online");
 		ResultSet rs = null ;
 		try {
 			Statement  stmt  = db.conn.createStatement();
@@ -84,7 +84,7 @@ public class AddSkuToCart {
 //	@Test
 	public void get_cart() {
 		//String url = "http://www.mjitech.com/web/machine_api/get_cart.action" ;
-		String url = "http://test.mjitech.com/web/machine_api/get_cart.action" ;
+		String url = "http://www.mjitech.com/web/machine_api/get_cart.action" ;
 		json.put("storeId", 17);
 		try {
 			JSONObject getCarResult = service.httppostCartReturnJson(url, service.postParameter(json));
@@ -125,7 +125,7 @@ public class AddSkuToCart {
 	 * **/
     @Test
 	public void add_sku_to_cart() {
-		String url = "http://test.mjitech.com/web/machine_api/add_sku_to_cart.action" ;
+		String url = "http://www.mjitech.com/web/machine_api/add_sku_to_cart.action" ;
 		//String url = "http://test.mjitech.com/web/machine_api/add_sku_to_cart.action" ;
 		json.put("storeId","17");//门店号
 		json.put("skuId", "679");//商品SKU
@@ -148,7 +148,7 @@ public class AddSkuToCart {
 	//{"is_succ":true,"storeId":12,"order":{"newTotalPrice":0,"leftPrice":0.2,"skus":[],"orderNumber":"S0857802930","originalPrice":20,"totalPrice":20,"payTime":"","cancelUserId":0,"source":2,"buyerId":0,"type":0,"wxpayUrl":"","takenUserId":0,"sellerId":0,"refundOrderNumber":"","statusName":"已下单","takeGoodsNumber":"","from":0,"id":14247,"sellTime":1528336962205,"originalSellOrderId":0,"isParent":2,"parentId":0,"initialOrderId":0,"wxprepayId":"","expireTime":1528337862205,"warehouseId":12,"cancelTime":"","payStatusName":"未付款","to":0,"payStatus":1,"refundUserId":0,"realPrice":0,"status":1}}
 	@Test(dependsOnMethods = "add_sku_to_cart")
 	public void submitCart() {
-		String url = "http://test.mjitech.com/web/machine_api/submit_cart.action" ;
+		String url = "http://www.mjitech.com/web/machine_api/submit_cart.action" ;
 		json.put("storeId","17");
 		try {
 			JSONObject submitResult = service.httppostCartReturnJson(url, service.postParameter(json));
@@ -170,7 +170,7 @@ public class AddSkuToCart {
 	 * */
 	@Test(dependsOnMethods = "submitCart")
 	public void getPayUrl() {
-		String url = "http://test.mjitech.com/web/machine_api/get_pay_url.action" ;
+		String url = "http://www.mjitech.com/web/machine_api/get_pay_url.action" ;
 		json.put("storeId","17") ;
 		json.put("orderNumber",orderNumber);
 		try {
@@ -190,7 +190,7 @@ public class AddSkuToCart {
 	 * */
 	@Test(dependsOnMethods = "getPayUrl")
 	public void wxpay_callback_test() {
-		String url="http://test.mjitech.com/web/weixinpay_callback_test.action" ;
+		String url="http://www.mjitech.com/web/weixinpay_callback_test.action" ;
 		String body = "{\"return_code\":\"SUCCESSTEST\",\"openid\": \"oj4sH0qtPm0x0-ggPk0AQZGQR9xs\",\"out_trade_no\":\""+orderNumber+"\"}";
 		try {
 			JSONObject  result  = service.httppostPayCall(url, body);			
@@ -210,7 +210,7 @@ public class AddSkuToCart {
 	 * */
 	@Test(dependsOnMethods = "wxpay_callback_test")
 	public void get_order_detail() {
-		String url = "http://test.mjitech.com/web/machine_api/get_order_detail.action" ;
+		String url = "http://www.mjitech.com/web/machine_api/get_order_detail.action" ;
 		json.put("storeId","17") ;
 		json.put("orderNumber",orderNumber);
 		try {
@@ -242,7 +242,7 @@ public class AddSkuToCart {
 	 * */
 	@Test(dependsOnMethods="get_order_detail")
 	public void get_order_detail_by_takingnumber() {
-		String url = "http://test.mjitech.com/web/machine_api/get_order_detail_by_takingnumber.action" ;
+		String url = "http://www.mjitech.com/web/machine_api/get_order_detail_by_takingnumber.action" ;
 	//	String body = "{\"storeId\":\"15\",\"takingNumber\":\""+takeGoodsNumber+"\"}";
 		json.put("storeId", "17");
 		json.put("takingNumber", takeGoodsNumber) ;
@@ -265,7 +265,7 @@ public class AddSkuToCart {
 	 * */
 	@Test(dependsOnMethods="get_order_detail_by_takingnumber")
 	public void update_order_status() {
-		String url = "http://test.mjitech.com/web/machine_api/update_order_status.action";
+		String url = "http://www.mjitech.com/web/machine_api/update_order_status.action";
 		json.put("storeId", "17");
 		json.put("orderNumber", orderNumber) ;
 		//1新2已支付3未取4正在取5已取6取货失败7退款申请中8已退款9退款失败10部分退款，退款申请状态查阅RefundOrder状态21机器故障但未退款91已取消
@@ -325,7 +325,7 @@ public class AddSkuToCart {
 		String shwoQuantity = "select quantity from mt_inventory where warehouse_id=17 and sku_id=679 ORDER BY id desc" ;
 		String show_mt_new_sku_pass_real_quantity = "select real_quantity from mt_inventory where warehouse_id=17 and sku_id=679 ORDER BY id desc" ;
 		String show_real_quantity = "select real_quantity from mt_new_sku_pass where warehouse_id=17 and sku_id=679 ORDER BY id desc" ;
-		DBConnection db = new DBConnection("test");
+		DBConnection db = new DBConnection("online");
 		ResultSet rs = null ;
 		try {
 			Statement  stmt  = db.conn.createStatement();

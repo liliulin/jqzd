@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="0.839">
+           time="0.581">
   <properties />
-            <testcase name="get_paged_mainpage_data" time="0.647" classname="com.mjitech.qa.test.GetPagedMainpageData">
+            <testcase name="get_paged_mainpage_data" time="0.435" classname="com.mjitech.qa.test.GetPagedMainpageData">
                 <failure type="java.lang.AssertionError"
                   message="expected [true] but found [false]"
               >
@@ -47,6 +47,6 @@
           </testcase>
   
   
-            <testcase name="test_login_with_openid" time="0.192" classname="com.mjitech.qa.test.GetPagedMainpageData" />
+            <testcase name="test_login_with_openid" time="0.146" classname="com.mjitech.qa.test.GetPagedMainpageData" />
       
 </testsuite>

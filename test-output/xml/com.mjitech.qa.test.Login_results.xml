@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.945">
+           time="1.103">
   <properties />
   
   
-            <testcase name="login" time="1.742" classname="com.mjitech.qa.test.Login" />
-                <testcase name="login" time="0.062" classname="com.mjitech.qa.test.Login" />
-                <testcase name="login" time="0.044" classname="com.mjitech.qa.test.Login" />
-                <testcase name="login" time="0.046" classname="com.mjitech.qa.test.Login" />
+            <testcase name="login" time="0.058" classname="com.mjitech.qa.test.Login" />
                 <testcase name="login" time="0.051" classname="com.mjitech.qa.test.Login" />
+                <testcase name="login" time="0.050" classname="com.mjitech.qa.test.Login" />
+                <testcase name="login" time="0.261" classname="com.mjitech.qa.test.Login" />
+                <testcase name="login" time="0.683" classname="com.mjitech.qa.test.Login" />
       
 </testsuite>

@@ -13,7 +13,6 @@
           <include name="getPayUrl"/>
           <include name="add_sku_to_cart"/>
           <include name="update_order_status"/>
-          <include name="end"/>
         </methods>
       </class> <!-- com.mjitech.qa.test.AddSkuToCart -->
     </classes>
