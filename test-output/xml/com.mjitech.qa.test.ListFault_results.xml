@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="0.036">
+           time="0.042">
   <properties />
-            <testcase name="list_fault" time="0.036" classname="com.mjitech.qa.test.ListFault">
+            <testcase name="list_fault" time="0.042" classname="com.mjitech.qa.test.ListFault">
                 <failure type="net.sf.json.JSONException"
                   message="null object"
               >

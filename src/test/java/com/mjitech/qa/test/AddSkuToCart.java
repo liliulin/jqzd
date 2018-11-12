@@ -8,6 +8,8 @@ import org.apache.http.client.ClientProtocolException;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.log4testng.Logger;
+
 import com.mjitech.qa.service.BaseService;
 import com.mjitech.qa.util.DBConnection;
 import junit.framework.Assert;
@@ -18,6 +20,7 @@ import net.sf.json.JSONObject;
  *@date 2018-06-20
  * **/
 public class AddSkuToCart {
+	private static Logger logger = Logger.getLogger(AddSkuToCart.class);
 	BaseService service = new BaseService();
 	JSONObject json = JSONObject.fromObject("{}");
 	
@@ -90,7 +93,8 @@ public class AddSkuToCart {
 			JSONObject getCarResult = service.httppostCartReturnJson(url, service.postParameter(json));
 			String is_succ = getCarResult.getString("is_succ");
 			Assert.assertEquals(is_succ,"true");
-			System.out.println("getCarResult is:"+getCarResult);
+			logger.info("getCarResult is"+getCarResult);
+			//System.out.println("getCarResult is:"+getCarResult);
 		} catch (ClientProtocolException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -135,7 +139,8 @@ public class AddSkuToCart {
 			//{"currentCount":1,"is_succ":true}
 			String is_succ = add_sku_to_cart_result.getString("is_succ");
 			Assert.assertEquals(is_succ,"true");
-			System.out.println("add_sku_to_cart result is:"+add_sku_to_cart_result);
+			logger.info("add_sku_to_cart result is:"+add_sku_to_cart_result);
+			//System.out.println("add_sku_to_cart result is:"+add_sku_to_cart_result);
 		} catch (ClientProtocolException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

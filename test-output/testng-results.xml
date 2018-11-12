@@ -1,49 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5199" started-at="2018-10-29T03:52:39Z" finished-at="2018-10-29T03:52:44Z">
+  <suite name="Default suite" duration-ms="759" started-at="2018-11-12T09:25:39Z" finished-at="2018-11-12T09:25:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5199" started-at="2018-10-29T03:52:39Z" finished-at="2018-10-29T03:52:44Z">
-      <class name="com.mjitech.qa.test.AddSkuToCart">
-        <test-method status="PASS" signature="beforerMethod()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@5bcea91b]" name="beforerMethod" is-config="true" duration-ms="3263" started-at="2018-10-29T11:52:39Z" finished-at="2018-10-29T11:52:42Z">
+    <test name="Default test" duration-ms="759" started-at="2018-11-12T09:25:39Z" finished-at="2018-11-12T09:25:40Z">
+      <class name="com.mjitech.qa.test.FlagInterface">
+        <test-method status="PASS" signature="getAlowedTaskAction()[pri:0, instance:com.mjitech.qa.test.FlagInterface@6043cd28]" name="getAlowedTaskAction" duration-ms="736" started-at="2018-11-12T17:25:39Z" finished-at="2018-11-12T17:25:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforerMethod -->
-        <test-method status="PASS" signature="add_sku_to_cart()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@5bcea91b]" name="add_sku_to_cart" duration-ms="797" started-at="2018-10-29T11:52:42Z" finished-at="2018-10-29T11:52:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- add_sku_to_cart -->
-        <test-method status="PASS" signature="submitCart()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@5bcea91b]" name="submitCart" duration-ms="169" started-at="2018-10-29T11:52:43Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.add_sku_to_cart" finished-at="2018-10-29T11:52:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- submitCart -->
-        <test-method status="PASS" signature="getPayUrl()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@5bcea91b]" name="getPayUrl" duration-ms="78" started-at="2018-10-29T11:52:43Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.submitCart" finished-at="2018-10-29T11:52:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getPayUrl -->
-        <test-method status="PASS" signature="wxpay_callback_test()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@5bcea91b]" name="wxpay_callback_test" duration-ms="114" started-at="2018-10-29T11:52:43Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.getPayUrl" finished-at="2018-10-29T11:52:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- wxpay_callback_test -->
-        <test-method status="PASS" signature="get_order_detail()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@5bcea91b]" name="get_order_detail" duration-ms="90" started-at="2018-10-29T11:52:43Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.wxpay_callback_test" finished-at="2018-10-29T11:52:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- get_order_detail -->
-        <test-method status="PASS" signature="get_order_detail_by_takingnumber()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@5bcea91b]" name="get_order_detail_by_takingnumber" duration-ms="127" started-at="2018-10-29T11:52:43Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.get_order_detail" finished-at="2018-10-29T11:52:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- get_order_detail_by_takingnumber -->
-        <test-method status="PASS" signature="update_order_status()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@5bcea91b]" name="update_order_status" duration-ms="204" started-at="2018-10-29T11:52:44Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.get_order_detail_by_takingnumber" finished-at="2018-10-29T11:52:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- update_order_status -->
-        <test-method status="PASS" signature="end()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@5bcea91b]" name="end" is-config="true" duration-ms="309" started-at="2018-10-29T11:52:44Z" finished-at="2018-10-29T11:52:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- end -->
-      </class> <!-- com.mjitech.qa.test.AddSkuToCart -->
+        </test-method> <!-- getAlowedTaskAction -->
+      </class> <!-- com.mjitech.qa.test.FlagInterface -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

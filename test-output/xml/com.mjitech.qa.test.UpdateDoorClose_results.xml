@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="0.032">
+           time="0.050">
   <properties />
-            <testcase name="update_close_door" time="0.032" classname="com.mjitech.qa.test.UpdateDoorClose">
+            <testcase name="update_close_door" time="0.050" classname="com.mjitech.qa.test.UpdateDoorClose">
                 <failure type="net.sf.json.JSONException"
                   message="JSONObject[&quot;is_succ&quot;] not found."
               >

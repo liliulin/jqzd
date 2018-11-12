@@ -3,18 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.mjitech.qa.test.AddSkuToCart">
+      <class name="com.mjitech.qa.test.GetMachineData">
         <methods>
-          <include name="submitCart"/>
-          <include name="get_order_detail"/>
-          <include name="get_order_detail_by_takingnumber"/>
-          <include name="wxpay_callback_test"/>
-          <include name="beforerMethod"/>
-          <include name="getPayUrl"/>
-          <include name="add_sku_to_cart"/>
-          <include name="update_order_status"/>
+          <include name="getMachineData"/>
         </methods>
-      </class> <!-- com.mjitech.qa.test.AddSkuToCart -->
+      </class> <!-- com.mjitech.qa.test.GetMachineData -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

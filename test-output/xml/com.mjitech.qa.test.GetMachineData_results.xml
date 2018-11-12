@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="0.075">
+           time="0.118">
   <properties />
-            <testcase name="getMachineData" time="0.075" classname="com.mjitech.qa.test.GetMachineData">
+            <testcase name="getMachineData" time="0.118" classname="com.mjitech.qa.test.GetMachineData">
                 <failure type="net.sf.json.JSONException"
                   message="null object"
               >
