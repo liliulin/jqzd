@@ -1,1 +1,14 @@
-/target/
+*.classpath
+*.project
+*.settings/
+*.idea/
+*.sonar/
+*target/
+bin/
+*bin/
+bin/
+*.iml
+*.bak
+*test-output/
+sublime-project
+sublime-project.sublime-workspace

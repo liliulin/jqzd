@@ -94,7 +94,7 @@ public class AddSkuToCart {
 			String is_succ = getCarResult.getString("is_succ");
 			Assert.assertEquals(is_succ,"true");
 			logger.info("getCarResult is"+getCarResult);
-			//System.out.println("getCarResult is:"+getCarResult);
+			System.out.println("getCarResult is:"+getCarResult);
 		} catch (ClientProtocolException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -139,8 +139,7 @@ public class AddSkuToCart {
 			//{"currentCount":1,"is_succ":true}
 			String is_succ = add_sku_to_cart_result.getString("is_succ");
 			Assert.assertEquals(is_succ,"true");
-			logger.info("add_sku_to_cart result is:"+add_sku_to_cart_result);
-			//System.out.println("add_sku_to_cart result is:"+add_sku_to_cart_result);
+			System.out.println("add_sku_to_cart result is:"+add_sku_to_cart_result);
 		} catch (ClientProtocolException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
