@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="759" started-at="2018-11-12T09:25:39Z" finished-at="2018-11-12T09:25:40Z">
+  <suite name="Default suite" duration-ms="8012" started-at="2018-12-16T07:15:09Z" finished-at="2018-12-16T07:15:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="759" started-at="2018-11-12T09:25:39Z" finished-at="2018-11-12T09:25:40Z">
-      <class name="com.mjitech.qa.test.FlagInterface">
-        <test-method status="PASS" signature="getAlowedTaskAction()[pri:0, instance:com.mjitech.qa.test.FlagInterface@6043cd28]" name="getAlowedTaskAction" duration-ms="736" started-at="2018-11-12T17:25:39Z" finished-at="2018-11-12T17:25:40Z">
+    <test name="Default test" duration-ms="8012" started-at="2018-12-16T07:15:09Z" finished-at="2018-12-16T07:15:17Z">
+      <class name="com.mjitech.qa.test.AddSkuToCart">
+        <test-method status="PASS" signature="beforerMethod()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@12cdcf4]" name="beforerMethod" is-config="true" duration-ms="458" started-at="2018-12-16T15:15:09Z" finished-at="2018-12-16T15:15:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getAlowedTaskAction -->
-      </class> <!-- com.mjitech.qa.test.FlagInterface -->
+        </test-method> <!-- beforerMethod -->
+        <test-method status="PASS" signature="get_order_detail_by_takingnumber()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@12cdcf4]" name="get_order_detail_by_takingnumber" duration-ms="5855" started-at="2018-12-16T15:15:10Z" finished-at="2018-12-16T15:15:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get_order_detail_by_takingnumber -->
+        <test-method status="PASS" signature="set_outbatchsku_status()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@12cdcf4]" name="set_outbatchsku_status" duration-ms="35" started-at="2018-12-16T15:15:15Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.get_order_detail_by_takingnumber" finished-at="2018-12-16T15:15:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- set_outbatchsku_status -->
+        <test-method status="PASS" signature="upload_error()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@12cdcf4]" name="upload_error" duration-ms="1532" started-at="2018-12-16T15:15:15Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.set_outbatchsku_status" finished-at="2018-12-16T15:15:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- upload_error -->
+        <test-method status="PASS" signature="update_order_status()[pri:0, instance:com.mjitech.qa.test.AddSkuToCart@12cdcf4]" name="update_order_status" duration-ms="94" started-at="2018-12-16T15:15:17Z" depends-on-methods="com.mjitech.qa.test.AddSkuToCart.upload_error" finished-at="2018-12-16T15:15:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- update_order_status -->
+      </class> <!-- com.mjitech.qa.test.AddSkuToCart -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
